@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<title>epam_Registration</title>
+<head>
+	<script> 
+function fun1()                                    
+{ 
+    var name = document.forms["RegForm"]["Name"];               
+    var email = document.forms["RegForm"]["Email"]; 
+    var password = document.forms["RegForm"]["Password"];   
+    var phone = document.forms["RegForm"]["Telephone"];   
+      
+    var languages = document.forms["RegForm"]["Languages"]; 
+    var address= document.forms["RegForm"]["Address"]; 
+    var gender=document.forms["RegForm"]["gender"];
+    var date=document.forms["RegForm"]["date"];
+   
+    if (name.value == "")                                  
+    { 
+        window.alert("Please enter your name."); 
+        name.focus(); 
+        return false; 
+    } 
+   
+    else if (email.value == "")                               
+    { 
+        window.alert("Please enter your email."); 
+        email.focus(); 
+        return false; 
+    } 
+       
+    if (password.value == "")                                   
+    { 
+        window.alert("Please enter a valid password."); 
+        password.focus(); 
+        return false;
+    }
+    if(phone.value=="")
+    {
+    	window.alert("please enter phone number");
+    	phone.focus();
+    	return false;
+    }
+    if(gender.value =="")
+    {
+    	window.alert("please select the gender");
+    	gender.focus();
+    	return false;
+    }
+    if(date.value =="")
+    {
+    	window.alert("select date-of-birth");
+    	date.focus;
+    	return false;
+    }
+    if(languages.value =="")
+    {
+    	window.alert("please select the vknown Languages");
+    	languages.focus();
+    	return false;
+    }
+    if(address.value=="")
+    {
+    	window.alert("please the address");
+    	address.focus();
+    	return false;
+    }
+    return true;
+}
+</script>
+
+	<style>
+		.res{
+			color:blue; 
+			box-sizing: 20px; 
+			background:cyan;
+			padding-top: 50px;
+			padding-bottom: 50px;
+			border: outset;
+			border-color:black; 
+		}
+	</style>
+	
+</head>
+<body>
+	<form name= "RegForm" action="/action_page.php" onsubmit="return fun1()" method="post" align="center" class="res">
+		<b  > <h1 style="color: black ;background-color:DodgerBlue">Epam-Registration Page</h1></b><br><br>
+		
+		Name:
+		<input type="text" name="Name" placeholder="Name"><br>
+		E-mail id
+		<input type="email" name="Email" placeholder="email"><br>
+		Password
+		<input type="password" name="Password" placeholder="password"><br>
+		Phone number:
+		<input type="text" name="Telephone" placeholder="Phone number"><br>
+		Sex:
+		<input type="radio" name="gender" value="male">male 
+		<input type="radio" name="gender" value="female">female <br>
+		Date of Birth
+		<input type="Date" name="date"><br>
+		Languages Known:
+		<input type="checkbox" name="Languages">english
+		<input type="checkbox" name="Languages" value="telugu">telugu
+		<input type="checkbox" name="Languages">telugu<br>
+		Address:
+		<input type="text" name="Address" size="40" width="100" height="100"><br>
+		submit
+		<input type="submit" value="submit" name="Submit">
+		
+	</form>
+</body>
+	
+
+</html>
